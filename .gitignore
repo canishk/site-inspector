@@ -1,12 +1,35 @@
-# Local scan artifacts (may contain target-specific data)
+# --- Scan output (may contain target URLs, session metadata, raw scanner data) ---
+assessment_output/
 assessment_*/
 runs/
 runs_*/
+**/raw/zap.json
+**/raw/nmap.xml
+**/raw/testssl.json
+**/raw/browser_storage_state.json
+**/raw/*storage_state*
 
-# Client / engagement notes (optional local only)
+# Local engagement notes / client reports (not for publication)
 php-job-portal.txt
+*.local.md
 
-# Python
+# --- Secrets and credentials (never commit) ---
+.env
+.env.*
+.env.local
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+**/login.json
+!scripts/tests/**/login.json
+
+# Shell / CI credential env files
+*.credentials
+
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
@@ -14,17 +37,26 @@ __pycache__/
 venv/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
 
-# Secrets and credentials
-.env
-.env.*
-*.pem
-*.key
-
-# Playwright / browser
+# --- Playwright / browser automation ---
 playwright-report/
 test-results/
+.playwright/
 
-# OS / editor
+# --- Docker scanner noise (if copied out of runs/) ---
+zap.json
+nmap.xml
+
+# --- OS / editor ---
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+# Keep .cursor/skills/ in repo if tracked; ignore other local Cursor state
+.cursor/rules/
+.cursor/plans/
