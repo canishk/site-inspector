@@ -1,0 +1,30 @@
+# Local scan artifacts (may contain target-specific data)
+assessment_*/
+runs/
+runs_*/
+
+# Client / engagement notes (optional local only)
+php-job-portal.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Playwright / browser
+playwright-report/
+test-results/
+
+# OS / editor
+.DS_Store
+Thumbs.db

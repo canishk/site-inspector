@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cert_notAfter",
+    "severity": "OK",
+    "finding": "2027-01-01"
+  },
+  {
+    "id": "TLS1_3",
+    "severity": "OK",
+    "finding": "offered"
+  },
+  {
+    "id": "HSTS",
+    "severity": "LOW",
+    "finding": "not offered"
+  },
+  {
+    "id": "cipher_weak",
+    "severity": "HIGH",
+    "finding": "RC4 offered"
+  }
+]

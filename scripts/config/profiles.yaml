@@ -1,0 +1,23 @@
+# Scan profile defaults (reference; logic mirrored in engagement.PROFILE_DEFAULTS).
+passive:
+  native: true
+  zap: false
+  nmap: false
+  testssl: true
+  browser: false
+
+safe-active:
+  native: true
+  zap: true
+  zap_mode: baseline
+  nmap: true
+  testssl: true
+  browser: true
+
+full:
+  native: true
+  zap: true
+  zap_mode: full
+  nmap: true
+  testssl: true
+  browser: true

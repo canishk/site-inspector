@@ -1,0 +1,21 @@
+[
+  {
+    "@name": "https://example.com",
+    "alerts": [
+      {
+        "alert": "X-Content-Type-Options Header Missing",
+        "riskcode": "1",
+        "desc": "Anti MIME-Sniffing header missing.",
+        "solution": "Set X-Content-Type-Options: nosniff",
+        "instances": [{"uri": "https://example.com/"}]
+      },
+      {
+        "alert": "Content Security Policy (CSP) Header Not Set",
+        "riskcode": "2",
+        "desc": "CSP missing.",
+        "solution": "Define a CSP.",
+        "instances": [{"uri": "https://example.com/"}]
+      }
+    ]
+  }
+]

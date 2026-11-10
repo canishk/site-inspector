@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<nmaprun>
+  <host>
+    <address addr="93.184.216.34" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="443">
+        <state state="open"/>
+        <service name="https"/>
+      </port>
+      <port protocol="tcp" portid="8080">
+        <state state="open"/>
+        <service name="http-proxy"/>
+      </port>
+    </ports>
+    <hostscript>
+      <script id="http-title" output="Example Domain"/>
+    </hostscript>
+  </host>
+</nmaprun>
